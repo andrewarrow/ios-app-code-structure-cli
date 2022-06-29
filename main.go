@@ -1,6 +1,7 @@
 package main
 
 import (
+	"iacs/ios"
 	"math/rand"
 	"os"
 	"time"
@@ -15,7 +16,9 @@ func main() {
 	}
 	command := os.Args[1]
 
-	if command == "new" {
+	if command == "scan" {
+		dir := os.Args[2]
+		ios.Scan(dir)
 	} else if command == "ls" {
 	}
 }
